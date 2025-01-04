@@ -7,7 +7,9 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "biome:check": "pnpm dlx @biomejs/biome check --write ./src",
+    "prepare": "husky"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -20,9 +22,21 @@
     "typescript": "^5.7.2"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
     "husky": "^9.1.7",
+    "lint-staged": "^15.3.0",
     "sharp": "^0.33.5"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "pnpm run biome:check"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }

@@ -1,3 +1,4 @@
+import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 import award from "./schemas/resume/award";
 import basic from "./schemas/resume/basic";
@@ -11,7 +12,6 @@ import reference from "./schemas/resume/reference";
 import skill from "./schemas/resume/skill";
 import volunteer from "./schemas/resume/volunteer";
 import work from "./schemas/resume/work";
-import { defineCollection, z } from "astro:content";
 
 const resumeCollection = defineCollection({
 	loader: glob({ pattern: "**/resume.json", base: "./src/content/resume" }),
@@ -21,15 +21,27 @@ const resumeCollection = defineCollection({
 			work: work.array(),
 			volunteer: volunteer.array(),
 			education: education.array(),
-			awards: award.array().describe("Specify any awards you have received throughout your professional career"),
+			awards: award
+				.array()
+				.describe(
+					"Specify any awards you have received throughout your professional career",
+				),
 			certificates: certificate
 				.array()
-				.describe("Specify any certificates you have received throughout your professional career"),
-			publications: publication.array().describe("Specify your publications through your career"),
+				.describe(
+					"Specify any certificates you have received throughout your professional career",
+				),
+			publications: publication
+				.array()
+				.describe("Specify your publications through your career"),
 			skills: skill.array().describe("List out your professional skill-set"),
-			languages: language.array().describe("List any other languages you speak"),
+			languages: language
+				.array()
+				.describe("List any other languages you speak"),
 			interests: interest.array(),
-			references: reference.array().describe("List references you have received"),
+			references: reference
+				.array()
+				.describe("List references you have received"),
 			projects: project.array().describe("Specify career projects"),
 		}),
 });
@@ -37,4 +49,3 @@ const resumeCollection = defineCollection({
 export const collections = {
 	resume: resumeCollection,
 };
-

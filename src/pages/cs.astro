@@ -1,20 +1,20 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import { getEntry } from "astro:content";
+import Awards from "../components/sections/Awards.astro";
+import Certificates from "../components/sections/Certificates.astro";
+import Education from "../components/sections/Education.astro";
 import Interests from "../components/sections/Interests.astro";
 import Languages from "../components/sections/Languages.astro";
 import Person from "../components/sections/Person.astro";
 import Projects from "../components/sections/Projects.astro";
-import Skills from "../components/sections/Skills.astro";
-import Summary from "../components/sections/Summary.astro";
-import Work from "../components/sections/Work.astro";
-import Dialog from "../components/shared/Dialog.astro";
-import Awards from "../components/sections/Awards.astro";
-import Certificates from "../components/sections/Certificates.astro";
 import Publications from "../components/sections/Publications.astro";
 import References from "../components/sections/References.astro";
-import Education from "../components/sections/Education.astro";
+import Skills from "../components/sections/Skills.astro";
+import Summary from "../components/sections/Summary.astro";
 import Volunteer from "../components/sections/Volunteer.astro";
-import { getEntry } from "astro:content";
+import Work from "../components/sections/Work.astro";
+import Dialog from "../components/shared/Dialog.astro";
+import Layout from "../layouts/Layout.astro";
 
 const entry = await getEntry("resume", "cs/resume");
 if (!entry) throw new Error("Entry not found");

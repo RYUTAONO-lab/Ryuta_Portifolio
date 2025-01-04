@@ -1,17 +1,17 @@
 ---
-import { Icon } from "astro-icon/components";
 import { type CollectionEntry } from "astro:content";
+import { Icon } from "astro-icon/components";
 import transformProfiles from "../../utils/transformProfiles";
 
 interface Props {
-  basics: CollectionEntry<"resume">["data"]["basics"];
-  languagesHeader: string;
-  dialogHeader: string;
-  linksHeader: string;
-  print: string;
+	basics: CollectionEntry<"resume">["data"]["basics"];
+	languagesHeader: string;
+	dialogHeader: string;
+	linksHeader: string;
+	print: string;
 }
 const { basics, languagesHeader, dialogHeader, linksHeader, print } =
-  Astro.props;
+	Astro.props;
 const links = transformProfiles(basics);
 ---
 
