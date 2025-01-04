@@ -1,15 +1,15 @@
-import award from "../schemas/resume/award";
-import basic from "../schemas/resume/basic";
-import certificate from "../schemas/resume/certificate";
-import education from "../schemas/resume/education";
-import interest from "../schemas/resume/interest";
-import language from "../schemas/resume/language";
-import project from "../schemas/resume/project";
-import publication from "../schemas/resume/publication";
-import reference from "../schemas/resume/reference";
-import skill from "../schemas/resume/skill";
-import volunteer from "../schemas/resume/volunteer";
-import work from "../schemas/resume/work";
+import award from "./schemas/resume/award";
+import basic from "./schemas/resume/basic";
+import certificate from "./schemas/resume/certificate";
+import education from "./schemas/resume/education";
+import interest from "./schemas/resume/interest";
+import language from "./schemas/resume/language";
+import project from "./schemas/resume/project";
+import publication from "./schemas/resume/publication";
+import reference from "./schemas/resume/reference";
+import skill from "./schemas/resume/skill";
+import volunteer from "./schemas/resume/volunteer";
+import work from "./schemas/resume/work";
 import { defineCollection, z } from "astro:content";
 
 const resumeCollection = defineCollection({
