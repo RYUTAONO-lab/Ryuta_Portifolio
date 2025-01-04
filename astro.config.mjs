@@ -5,4 +5,5 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
 	integrations: [icon(), tailwind()],
+	site:"http://localhost:4321"
 });

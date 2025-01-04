@@ -1,3 +1,4 @@
+import { glob } from "astro/loaders";
 import award from "./schemas/resume/award";
 import basic from "./schemas/resume/basic";
 import certificate from "./schemas/resume/certificate";
@@ -13,7 +14,7 @@ import work from "./schemas/resume/work";
 import { defineCollection, z } from "astro:content";
 
 const resumeCollection = defineCollection({
-	type: "data",
+	loader: glob({ pattern: "**/resume.json", base: "./src/content/resume" }),
 	schema: ({ image }) =>
 		z.object({
 			basics: basic(image),
@@ -36,3 +37,4 @@ const resumeCollection = defineCollection({
 export const collections = {
 	resume: resumeCollection,
 };
+

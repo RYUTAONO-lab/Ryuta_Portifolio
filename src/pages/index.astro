@@ -1,5 +1,5 @@
 ---
-import { getDataEntryById } from "astro:content";
+import { getEntry } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Person from "../components/sections/Person.astro";
 import Summary from "../components/sections/Summary.astro";
@@ -16,8 +16,8 @@ import Awards from "../components/sections/Awards.astro";
 import Education from "../components/sections/Education.astro";
 import Volunteer from "../components/sections/Volunteer.astro";
 
-const entry = await getDataEntryById("resume", "en/resume");
-
+const entry = await getEntry("resume", "en/resume");
+if (!entry) throw new Error("Entry not found");
 const data = entry.data;
 ---
 

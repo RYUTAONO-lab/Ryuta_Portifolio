@@ -7,7 +7,7 @@ interface Props {
 const { header, id } = Astro.props;
 ---
 
-<section>
+<section id={id}>
   {
     id ? (
       <a href={`#${id}`} class="hover:underline decoration-2">
