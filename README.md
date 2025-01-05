@@ -18,7 +18,7 @@ Built with Astro and Tailwind.
 
 The content collection schema for the resume basically matches the [JSON Resume schema](https://jsonresume.org/schema/) and under `/api/{locale}.json` one can find a json representation of your resume. 
 
-The path to the image gets replaced but you have to set the `VITE_BASE_URL` environment variable with a path to the root of the project, it has to include trailing slash (`https://example.com/` is going to result in  `https://example.com/_astro/photo.MK1hhBVF.jpg` for example)
+The path to the image gets replaced but you have to set the `site` config value in [`astro.config.mjs`](./astro.config.mjs)(for example `https://example.com` is going to result in  `https://example.com/_astro/photo.MK1hhBVF.jpg`)
 
 ## Development
 
