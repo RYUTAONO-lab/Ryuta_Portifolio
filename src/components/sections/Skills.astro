@@ -1,11 +1,11 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import Section from "../shared/Section.astro";
 import Proficiency from "../shared/Proficiency.astro";
+import Section from "../shared/Section.astro";
 
 interface Props {
-  header: string;
-  skills: CollectionEntry<"resume">["data"]["skills"];
+	header: string;
+	skills: CollectionEntry<"resume">["data"]["skills"];
 }
 const { header, skills } = Astro.props;
 ---

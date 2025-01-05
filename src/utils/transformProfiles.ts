@@ -4,7 +4,9 @@ type Link = CollectionEntry<"resume">["data"]["basics"]["profiles"][number] & {
 	icon: string;
 };
 
-function transformProfiles(basics: CollectionEntry<"resume">["data"]["basics"]): Array<Link> {
+function transformProfiles(
+	basics: CollectionEntry<"resume">["data"]["basics"],
+): Array<Link> {
 	const links: Array<Link> = [];
 
 	if (basics.url)

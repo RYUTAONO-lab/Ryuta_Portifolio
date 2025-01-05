@@ -2,12 +2,12 @@
 import { Icon } from "astro-icon/components";
 
 interface Props {
-  url?: string;
-  name: string;
-  description?: string;
-  startDate: Date;
-  endDate?: Date;
-  hideEndDate?: boolean;
+	url?: string;
+	name: string;
+	description?: string;
+	startDate: Date;
+	endDate?: Date;
+	hideEndDate?: boolean;
 }
 const props = Astro.props;
 if (!props.endDate) props.endDate = new Date();

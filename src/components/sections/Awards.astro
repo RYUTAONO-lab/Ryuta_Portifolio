@@ -1,11 +1,11 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import Section from "../shared/Section.astro";
 import ListItem from "../shared/ListItem.astro";
+import Section from "../shared/Section.astro";
 
 interface Props {
-  header: string;
-  awards: CollectionEntry<"resume">["data"]["awards"];
+	header: string;
+	awards: CollectionEntry<"resume">["data"]["awards"];
 }
 
 const { awards, header } = Astro.props;
@@ -17,7 +17,7 @@ const { awards, header } = Astro.props;
       awards.map((award) => (
         <ListItem>
           <div class="w-full">
-            <div class="flex items-center justify-between">
+            <div class="flex gap-1 text-gray-500">
               <h3 class="font-semibold">{award.title}</h3>
               <span class="text-gray-500 flex gap-1">
                 <time
@@ -29,7 +29,7 @@ const { awards, header } = Astro.props;
               </span>
             </div>
             <p class="text-gray-500 text-sm">{award.awarder}</p>
-            <p class="text-gray-500 text-xs pt-2">{award.summary}</p>
+            <p class="pt-2 text-gray-500 text-xs">{award.summary}</p>
           </div>
         </ListItem>
       ))

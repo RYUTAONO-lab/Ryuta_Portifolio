@@ -1,5 +1,5 @@
-import profile from "./profile";
 import { type ImageFunction, z } from "astro:content";
+import profile from "./profile";
 
 export default (image: ImageFunction) =>
 	z.object({
@@ -9,7 +9,9 @@ export default (image: ImageFunction) =>
 		email: z.string().email().optional(),
 		phone: z.string().optional(),
 		url: z.string().optional(),
-		summary: z.string().describe("Write a short 2-3 sentence biography about yourself"),
+		summary: z
+			.string()
+			.describe("Write a short 2-3 sentence biography about yourself"),
 		location: z
 			.object({
 				address: z
@@ -22,8 +24,14 @@ export default (image: ImageFunction) =>
 				countryCode: z.string(),
 				region: z
 					.string()
-					.describe("The general region where you live. Can be a US state, or a province, for instance."),
+					.describe(
+						"The general region where you live. Can be a US state, or a province, for instance.",
+					),
 			})
 			.optional(),
-		profiles: profile.array().describe("Specify any number of social networks that you participate in"),
+		profiles: profile
+			.array()
+			.describe(
+				"Specify any number of social networks that you participate in",
+			),
 	});

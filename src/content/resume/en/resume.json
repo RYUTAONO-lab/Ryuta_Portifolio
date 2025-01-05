@@ -5,7 +5,7 @@
 		"image": "../photo.jpg",
 		"email": "john@gmail.com",
 		"phone": "(912) 555-4321",
-		"url": "https://johndoe.com",
+		"url": "https://astro.build",
 		"summary": "A summary of John Doe…",
 		"location": {
 			"address": "2712 Broadway St",
@@ -17,8 +17,8 @@
 		"profiles": [
 			{
 				"network": "Twitter",
-				"username": "john",
-				"url": "https://twitter.com/john"
+				"username": "astrodotbuild",
+				"url": "https://twitter.com/astrodotbuild"
 			}
 		]
 	},
