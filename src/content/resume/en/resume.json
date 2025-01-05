@@ -5,7 +5,7 @@
 		"image": "../photo.jpg",
 		"email": "john@gmail.com",
 		"phone": "(912) 555-4321",
-		"url": "https://johndoe.com",
+		"url": "https://astro.build",
 		"summary": "A summary of John Doe…",
 		"location": {
 			"address": "2712 Broadway St",
@@ -17,8 +17,8 @@
 		"profiles": [
 			{
 				"network": "Twitter",
-				"username": "john",
-				"url": "https://twitter.com/john"
+				"username": "astrodotbuild",
+				"url": "https://twitter.com/astrodotbuild"
 			}
 		]
 	},
@@ -30,7 +30,9 @@
 			"startDate": "2013-01-01",
 			"endDate": "2014-01-01",
 			"summary": "Description…",
-			"highlights": ["Started the company"]
+			"highlights": [
+				"Started the company"
+			]
 		}
 	],
 	"volunteer": [
@@ -41,7 +43,9 @@
 			"startDate": "2012-01-01",
 			"endDate": "2013-01-01",
 			"summary": "Description…",
-			"highlights": ["Awarded 'Volunteer of the Month'"]
+			"highlights": [
+				"Awarded 'Volunteer of the Month'"
+			]
 		}
 	],
 	"education": [
@@ -53,7 +57,9 @@
 			"startDate": "2011-01-01",
 			"endDate": "2013-01-01",
 			"score": "4.0",
-			"courses": ["DB1101 - Basic SQL"]
+			"courses": [
+				"DB1101 - Basic SQL"
+			]
 		}
 	],
 	"awards": [
@@ -85,7 +91,11 @@
 		{
 			"name": "Web Development",
 			"level": "Master",
-			"keywords": ["HTML", "CSS", "JavaScript"]
+			"keywords": [
+				"HTML",
+				"CSS",
+				"JavaScript"
+			]
 		}
 	],
 	"languages": [
@@ -97,7 +107,10 @@
 	"interests": [
 		{
 			"name": "Wildlife",
-			"keywords": ["Ferrets", "Unicorns"]
+			"keywords": [
+				"Ferrets",
+				"Unicorns"
+			]
 		}
 	],
 	"references": [
@@ -112,10 +125,16 @@
 			"startDate": "2019-01-01",
 			"endDate": "2021-01-01",
 			"description": "Description...",
-			"highlights": ["Won award at AIHacks 2016"],
+			"highlights": [
+				"Won award at AIHacks 2016"
+			],
 			"url": "https://project.com/",
-			"roles": ["Team Lead"],
-			"keywords": ["CSS"]
+			"roles": [
+				"Team Lead"
+			],
+			"keywords": [
+				"CSS"
+			]
 		}
 	]
 }
