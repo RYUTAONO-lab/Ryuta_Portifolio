@@ -1,8 +1,8 @@
 {
 	"basics": {
-		"name": "John Doe",
+		"name": "Ryuta Ono",
 		"label": "Programmer",
-		"image": "../photo.jpg",
+		"image": "../photo.png",
 		"email": "john@gmail.com",
 		"phone": "(912) 555-4321",
 		"url": "https://astro.build",
